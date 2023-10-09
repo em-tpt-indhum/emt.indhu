@@ -1,5 +1,7 @@
 package src.codeEight;
 
+import java.util.Date;
+
 public class CricketScoreBoard {
     public static void main(String arg[])  {
         String team1[]={"Rohit Sharma", "Shubman Gill", "Virat Kohli", "KL Rahul", "Ishan Kishan",
@@ -13,7 +15,7 @@ public class CricketScoreBoard {
         Thread T1=new Thread(india);
         Thread T2=new Thread(sriLanka);
         double random=Math.random()*10;
-        double toss=random%2;
+        double toss=random%2;   //toss value select randomly
         for(int i=0;i<2;i++)
         {
             if(toss>0&&toss<1)
@@ -26,7 +28,7 @@ public class CricketScoreBoard {
                     System.out.println("\nIndia Batting Second");
                 }
                 T1.start();
-                try{T1.join();}
+                try{T1.join();}    //Wait untill the thread dead
                 catch (InterruptedException e)
                 {
                     e.printStackTrace();
@@ -44,7 +46,7 @@ public class CricketScoreBoard {
                     System.out.println("Sri Lanka Batting Second");
                 }
                 T2.start();
-                try{T2.join();}
+                try{T2.join();}  //Wait untill the thread dead
                 catch (InterruptedException e)
                 {
                     e.printStackTrace();
@@ -56,12 +58,13 @@ public class CricketScoreBoard {
         if(india.totalScore>sriLanka.totalScore)
         {
             System.out.println("India Won By  "+(india.totalScore- sriLanka.totalScore));
+            System.out.println("Today = "+new Date());   //Here match date print Here Date format Day MMM DD HH:MM:SS IST YYYY
         }
         if(sriLanka.totalScore> india.totalScore)
         {
             System.out.println("Sri Lanka Won By  "+(sriLanka.totalScore- india.totalScore));
+            System.out.println("Today = "+new Date());//Here match date print Here Date format Day MMM DD HH:MM:SS IST YYYY
         }
 
     }
 }
-

@@ -5,14 +5,15 @@ import java.util.List;
 public class CodethoneOne {
     public static void main(String arg[])
     {
-        List<String> usernames=new ArrayList<>();
+        List<String> usernames=new ArrayList<>();//Input store in the list
         usernames.add("Aab");
         usernames.add("Cta");
         usernames.add("Bapg");
         usernames.add("Indhu");
-        possibleChange(usernames);
+        List dictionaryWise=possibleChange(usernames);
+        System.out.println(dictionaryWise);//If order Doesn't Changes then print "NO" order Changed then print "YES"
     }
-    static void possibleChange(List<String> usernames) {
+    static List possibleChange(List<String> usernames) {
         System.out.println(usernames);
         List<String> use = new ArrayList<>();
         for (String var : usernames) {
@@ -41,24 +42,23 @@ public class CodethoneOne {
                 str = str + ch[i];
             }
 
-            use.add(str);
-
+            use.add(str);  // store dictionary order wise character string
 
         }
-        System.out.println(use);
+       // System.out.println(use);     // prints dictionary order wise
 
         List<String> answer = new ArrayList<>();
         for (int i = 0; i < usernames.size(); i++) {
             String a = usernames.get(i);
             String b = use.get(i);
             if (a.equals(b)) {
-                answer.add("NO");
+                answer.add("NO");// If order Doesn't Changes then print "NO"
             } else {
-                answer.add("YES");
+                answer.add("YES");// If order changes then Print "YES"
             }
 
         }
-        System.out.println(answer);
-
+       // System.out.println(answer);
+        return answer;
     }
 }

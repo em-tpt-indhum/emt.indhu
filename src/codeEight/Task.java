@@ -1,7 +1,5 @@
 package src.codeEight;
 
-import java.util.Random;
-
 public class Task implements Runnable{
     String teamName;
     String playerName[];
@@ -18,7 +16,6 @@ public class Task implements Runnable{
     }
     @Override
     public void run() {
-        Random random=new Random(2);
         int b=0;
         int ext=0;
         int totalRan=0;
@@ -29,12 +26,11 @@ public class Task implements Runnable{
             totalRan=0;
             int ballLen=0;
             ext=0;
-            for(int j=0;b<60;j++)
+            for(int j=0;b<60;j++)           //Apply condition within 60 balls i.e.,10 over only
             {
-//                int ran = random.nextInt(8);
                 double a=Math.random()*10;
-                int ran=(int)a%8;
-                b++;
+                int ran=(int)a%8;            //Randomly select value from 0 to 7
+                b++;                          //store how many over
                 ballLen++;
                 totalRan=totalRan+ran;
                 if(ran==7)
@@ -67,7 +63,8 @@ public class Task implements Runnable{
         {
             totalScore=totalScore+c[i].totalRun;
         }
-        System.out.println("\n Total Score = "+totalScore+" Over="+((float)b/6));
+        double over=((double)b/6);
+        System.out.println("\n Total Score = "+totalScore+" Over="+(int)(Math.round(over * 10))/10.0);
 
     }
     void Display(cricketer player)
@@ -87,4 +84,3 @@ public class Task implements Runnable{
         System.out.println();
     }
 }
-

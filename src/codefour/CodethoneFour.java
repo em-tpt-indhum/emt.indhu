@@ -1,11 +1,11 @@
 package src.codefour;
 import java.util.Scanner;
 interface  LExpression{
-    public boolean Landa(int a);
+    public boolean Landa(int a);   //To implemnt Landa Expression to declare interface
 }
 public class CodethoneFour {
     public static void main(String[] args)  {
-        LExpression isOdd=a->{
+        LExpression isOdd=a->{     //Landa Expresion check isOdd
             if(a%2==0)
             {
                 return false;

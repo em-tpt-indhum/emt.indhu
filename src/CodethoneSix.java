@@ -8,9 +8,9 @@ public class CodethoneSix{
 
         char a[]= {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
 
-        List<String> list1 = new ArrayList<>();
+        List<String> list1 = new ArrayList<>();  // List1 for to store unique code
         int lenght=0;
-        List<String> list2=new ArrayList<>();
+        List<String> list2=new ArrayList<>();     //List2 for to store fruits name
 
         Map<String,List<String>> map = new HashMap<>();
         list1.add("345e5");
@@ -28,14 +28,13 @@ public class CodethoneSix{
                 char d = v1.charAt(i);
                 char c=Character.toLowerCase(d);
                 int asci = c;
-                if ((asci > 65 && asci < 90) || (asci > 97 && asci < 122)) {
+                if ((asci > 65 && asci < 90) || (asci > 97 && asci < 122)) { //if Alphabet met then it allow
                     for (int j = 0; j < 26; j++) {
                         if (a[j] == c) {
                             lenght = j + 1;
                         }
                     }
-                    for (String arr : list2
-                    ) {
+                    for (String arr : list2) {
                         if (lenght == arr.length()) {
                             ex.add(arr);
                         }
@@ -43,7 +42,7 @@ public class CodethoneSix{
                     }
                     if(ex.isEmpty())
                     {
-                        ex.add("No Fruits");
+                        ex.add("No Fruits");      //if no fruits mathch for it's length then No Fruits store
                         map.put(list1.get(k),ex);
                     }
                     else {
@@ -55,7 +54,7 @@ public class CodethoneSix{
             }
         }
         for(Map.Entry m : map.entrySet()){
-            System.out.println(m.getKey()+" "+m.getValue());
+            System.out.println(m.getKey()+" "+m.getValue()); //prints required Result
         }
 
 
