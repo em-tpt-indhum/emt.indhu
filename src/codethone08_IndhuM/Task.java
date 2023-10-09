@@ -20,7 +20,7 @@ public class Task implements Runnable{
         int ext=0;
         int totalRan=0;
 
-        for(int i=0;i<11;i++)
+        for(int i=0;i<10;i++)
         {
             c[i]=new cricketer(teamName,playerName[i]);
             totalRan=0;
@@ -47,7 +47,7 @@ public class Task implements Runnable{
             }
             if(ballLen==0)
             {
-                c[i].everyBallRun= new int[]{0, 0, 0};
+                c[i].everyBallRun= new int[]{0,0,0};
             }
             else {
                 c[i].everyBallRun=everyRan;
