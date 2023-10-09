@@ -8,6 +8,8 @@ public class CodethoneThree {
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter No. Of Trees : ");
         int noOfTree= sc.nextInt();
+        int limit=(int)Math.round((double)noOfTree/2);
+        //System.out.println(limit);
         int tree[]=new int[noOfTree];
         for(int i=0;i<noOfTree;i++)
         {
@@ -16,7 +18,6 @@ public class CodethoneThree {
         int maxArray=0;
         maxArray=maximumValueOfArray(tree);
 
-        int clockwise[]=new int[noOfTree];
         int anticlockwise[]=new int[noOfTree];
         int index=findIndex(tree,maxArray);
 
@@ -25,42 +26,49 @@ public class CodethoneThree {
         int cw=0;
         int aw=0;
         int clockWise[]=new int[noOfTree];
+        int fix=index;
+        int inde=fix;
 
-        for(int i=0;i<noOfTree;i++)//clockwise
+        for(int i=0;i<limit;i++)//clockwise
         {
-
-            int fix=index;
-            int inde=findIndex(tree,tree[i]);
-            if(fix!=inde) {
+            inde=inde+1;
+            if(index>noOfTree)
+            {
+                inde=0;
+            }
+            if(fix!=inde&&inde<noOfTree) {
                 if (fix < inde) {
                     cw = inde - fix;
-                    clockWise[i]=cw+tree[i]+maxArray;
+                    clockWise[i]=cw+tree[inde]+maxArray;
 
                 }
                 else {
                     cw=noOfTree-fix+inde;
-                    clockWise[i]=cw+tree[i]+maxArray;
+                    clockWise[i]=cw+tree[inde]+maxArray;
                 }
             }
 
         }
         maxCWise=maximumValueOfArray(clockWise);
 
-
-        for(int i=0;i<noOfTree;i++)//Anticlockwise
+        inde=fix;
+        for(int i=0;i<Math.round(noOfTree/2);i++)//Anticlockwise
         {
+            inde=inde-1;
+            if(inde<0)
+            {
+                inde=noOfTree-1;
+            }
 
-            int fix=index;
-            int inde=findIndex(tree,tree[i]);
-            if(fix!=inde) {
+            if(fix!=inde&&inde>0) {
                 if (fix < inde) {
                     aw =fix+noOfTree-inde;
-                    anticlockwise[i]=aw+tree[i]+maxArray;
+                    anticlockwise[i]=aw+tree[inde]+maxArray;
 
                 }
                 else {
                     aw=fix-inde;
-                    anticlockwise[i]=aw+tree[i]+maxArray;
+                    anticlockwise[i]=aw+tree[inde]+maxArray;
                 }
             }
 
@@ -94,4 +102,3 @@ public class CodethoneThree {
         return maxArray;
     }
 }
-

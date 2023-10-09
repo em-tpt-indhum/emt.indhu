@@ -1,5 +1,4 @@
 package src.codefive;
-
 import java.util.Scanner;
 
 public class RectangleArea extends Rectangle {
