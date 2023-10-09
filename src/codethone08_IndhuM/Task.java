@@ -58,6 +58,8 @@ public class Task implements Runnable{
 
             Display(c[i]);
         }
+        c[10]=new cricketer(teamName,playerName[10]);
+        System.out.println(playerName[10]+" is not played");
 
         for(int i=0;i<10;i++)
         {
