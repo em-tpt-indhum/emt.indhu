@@ -1,4 +1,4 @@
-package src.codefive;
+package src.codethone05_IndhuM;
 
 import java.util.Scanner;
 public class swap2 {

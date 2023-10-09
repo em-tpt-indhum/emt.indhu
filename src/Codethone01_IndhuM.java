@@ -2,7 +2,7 @@ package src;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CodethoneOne {
+public class Codethone01_IndhuM {
     public static void main(String arg[])
     {
         List<String> usernames=new ArrayList<>();//Input store in the list

@@ -1,4 +1,4 @@
-package src.codeEight;
+package src.codethone08_IndhuM;
 public class cricketer {
     String teamName;
     String playerName;

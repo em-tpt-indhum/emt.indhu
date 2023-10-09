@@ -2,7 +2,7 @@ package src;
 
 import java.util.*;
 
-class CodethoneSeven{
+class Codethone07_IndhuM {
     public static void main(String arg[]) {
         Scanner sc = new Scanner(System.in);
         String a;                            //Declare String to get the input path value

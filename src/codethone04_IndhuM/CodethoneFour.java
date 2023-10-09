@@ -1,4 +1,4 @@
-package src.codefour;
+package src.codethone04_IndhuM;
 import java.util.Scanner;
 interface  LExpression{
     public boolean Landa(int a);   //To implemnt Landa Expression to declare interface

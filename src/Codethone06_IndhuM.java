@@ -2,7 +2,7 @@ package src;
 
 import java.util.*;
 
-public class CodethoneSix{
+public class Codethone06_IndhuM {
     public static void main(String arg[])
     {
 

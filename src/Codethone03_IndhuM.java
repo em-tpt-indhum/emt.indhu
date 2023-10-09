@@ -2,7 +2,7 @@ package src;
 
 import java.util.Scanner;
 
-public class CodethoneThree {
+public class Codethone03_IndhuM {
     public static void main(String arg[])
     {
         Scanner sc=new Scanner(System.in);

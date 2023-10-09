@@ -1,4 +1,4 @@
-package src.codefive;
+package src.codethone05_IndhuM;
 
 public class Rectangle {
     public int width;
