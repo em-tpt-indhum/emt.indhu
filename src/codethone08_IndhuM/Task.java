@@ -69,7 +69,7 @@ public class Task implements Runnable{
     }
     void Display(cricketer player)
     {
-        System.out.print(player.playerName+" "+player.balls+"(");
+        System.out.print(player.playerName+"  (");
         for(int i=0;i<60;i++)
         {
             System.out.print(player.everyBallRun[i]);
@@ -80,7 +80,7 @@ public class Task implements Runnable{
                 System.out.print(",");
             }
         }
-        System.out.print(")="+player.totalRun+"  (extra = "+player.extra+")");
+        System.out.print(")="+player.totalRun+"("+player.balls+")   (extra = "+player.extra+")");
         System.out.println();
     }
 }
